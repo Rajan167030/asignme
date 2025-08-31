@@ -354,8 +354,8 @@ This project is available under the MIT License. See the LICENSE file for more i
 
 ## 📧 Contact
 
-For feedback or questions, please use the [contact form](https://assignme.live/contactus.html) on the website.
+Rajan  Bhai (link  availble hai har  jagha )
 
 ---
 
-© 2025 [assignme.live](https://assignme.live) | All Rights Reserved.
+
