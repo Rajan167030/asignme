@@ -2,7 +2,7 @@
 
 AssignMe is an open source web application that helps students complete their assignments by converting digital text into customizable handwritten-style documents. The application provides two main features: generating handwritten-style documents from text and creating custom handwriting fonts from your own handwriting samples. You just need to upload your assignment question and wait for the magic.
 
-**🌐 Live Website: [assignme.live](https://assignme.live)**
+
 
 ![AssignMe Logo](image/logo.png)
 
