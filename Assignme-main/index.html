@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="author" content="doassignment">
+  <meta name="copyright" content="doassignment">
+
+
+  <!---Helps control how search engine bots crawl and index the content on your website.-->
+  <meta name="robots" content="index, follow">
+
+
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="assignme">
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="assignme" />
+
+
+  <title>assignme</title>
+
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Caveat:wght@400;700&family=Liu+Jian+Mao+Cao&family=Pacifico&family=Indie+Flower&family=Shadows+Into+Light&family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@400;700&family=Satisfy&family=Gloria+Hallelujah&family=Patrick+Hand&family=Kalam:wght@300;400;700&family=Reenie+Beanie&family=Zeyada&family=Handlee&family=Just+Another+Hand&family=Love+Ya+Like+A+Sister&family=Covered+By+Your+Grace&family=Architects+Daughter&family=Sue+Ellen+Francisco&family=Bad+Script&family=Rock+Salt&family=Yesteryear&family=Qwitcher+Grypen&family=Delius+Swash+Caps&family=Give+You+Glory&family=Kaushan+Script&family=Pinyon+Script&family=Pangolin&family=La+Belle+Aurore&family=Redressed&family=Allura&family=Herr+Von+Muellerhoff&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+
+    <!-- fav icon -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="image/icon.png">
+
+  <!--font awesome cdn link-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="./canvaPage/css/index.css" />
+  <link rel="stylesheet" href="./canvaPage/css/features.css" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="header">
+
+    <section class="flex">
+      <a href="index.html" class="logo">
+            <img src="image/logo.png" alt="assignme Logo">
+        </a>
+      
+      <nav class="navbar">
+        <a href="captureimg/index.html"><span>Own Handwriting</span></a>
+        <a href="docs.html"><span>Docs</span></a>
+        <a href="#about"><span>About</span></a>
+        <a href="contactus.html"><span>Feedback</span></a>
+      </nav>
+
+      <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+          <span class="toggle-slider"></span>
+        </label>
+        <span class="theme-text">Dark Mode</span>
+      </div>
+
+      <div id="menu-btn">Menu</div>
+    </section>
+
+
+  </header>
+
+  <section class="home" id="home">
+    <div class="row">
+      <div class="content">
+        <h3>Yo,<span> Future Scholars!</span></h3>
+        <p style="font-size: 2rem; font-weight: bold;">Stuck on Assignments or tired of doing ? We've Got Your Back!
+          get your assignments done in oneclick in your suitable handwriting.</p>
+        <a href="docs.html" class="btn" style="background-color: black; color: #fff;">Read Docs</a>
+      </div>
+      <div class="image">
+        <img src="image/front.jpg" alt="">
+      </div>
+    </div>
+  </section>
+  <main>
+
+    <div class="upload-section">
+      <h2 style="font-size: 1.75rem;">📄 Upload Your Assignment</h2>
+      <p class="section-description">Upload your assignment questions as a PDF or image file, and we'll convert them into handwritten text automatically.</p>
+
+      <div class="upload-form">
+        <div class="form-group">
+          <label for="fileInput" class="form-label">
+            <i class="fas fa-file-upload"></i> Choose File
+          </label>
+          <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png">
+          <small class="form-help">Supported formats: PDF, JPG, PNG</small>
+        </div>
+
+        <div class="form-group">
+          <label for="subjectInput" class="form-label">
+            <i class="fas fa-book"></i> Subject Name
+          </label>
+          <input type="text" id="subjectInput" placeholder="e.g., Mathematics, Physics, History">
+          <small class="form-help">Enter the subject to help process your assignment better</small>
+        </div>
+
+        <button onclick="uploadFile()" class="upload-btn">
+          <i class="fas fa-upload"></i> Upload & Process
+        </button>
+      </div>
+
+      <div id="response" class="response-message"></div>
+    </div>
+
+    <section class="generate-image-section">
+      <br /><br />
+      <form id="generate-image-form">
+        <!-- Generate Image Section -->
+        <div class="display-flex output-grid responsive-flex">
+          <div class="flex-1 page-container-super">
+            <div>
+              <h2 style="margin-top: 0px; font-size: 2rem; ">Paper Sheet</h2>
+            </div>
+
+            <div class="flex-1 page-container">
+              <div class="page-a ">
+                <div contenteditable="true" class="top-margin"></div>
+                <div class="display-flex left-margin-and-content">
+                  <div contenteditable="true" class="left-margin"></div>
+                  <div class="paper-content" id="note" contenteditable="true">
+                    <p>Hey buddy's , </p>
+                    <p>Hope you doing great except in assignments </p>
+                    <p>Got assignments giving you more twists and turns than a rollercoaster?</p>
+                    <p>Well, guess what? We've got the secret sauce to turn those academic acrobatics into a walk in the
+                      park!</p>
+                    <p>Prepare to unleash your inner Einstein and conquer those assignments like a boss!</p>
+                    <p>So grab your thinking caps, buckle up, and get ready for an assignment adventure like no other!
+                    </p>
+                    <p>Let's turn those 'oh no's into 'oh yeah's!</p>
+                  </div>
+
+                </div>
+                <div class="overlay"></div>
+              </div>
+              <br />
+            </div>
+          </div>
+
+          <div class="customization-col">
+            <div style="padding: 0px 0px 5px 0px;">
+
+            </div>
+
+            <h3 style="font-size: 1.2rem;"><i class="fas fa-palette"></i> Handwriting Customization</h3>
+            <p class="section-description">Customize how your handwritten assignment will look</p>
+
+            <div class="category-grid">
+              <div class="form-group">
+                <label class="block" for="handwriting-font" style="font-size: 1.25rem;">
+                  <i class="fas fa-font"></i> Handwriting Style
+                </label>
+                <select id="handwriting-font" style="font-size: 1rem;">
+                  <option selected style="font-family: 'Gloria Hallelujah'" value="'Gloria Hallelujah', cursive">Gloria Hallelujah</option>
+                  <option value="Beverly Smith">Beverly Smith</option>
+                  <option value="Happy_Font">Happy1 font</option>
+                  <option value="Happy Font">Happy font</option>
+                  <option value="Braden Hill">Braden Hill</option>
+                  <option value="Caroline Mutiboko">Caroline Mutiboko</option>
+                  <option value="David Mergens">David Mergens</option>
+                  <option value="David Reid">David Reid</option>
+                  <option value="David Reid CAP">David Reid (Standard PLUS Version)</option>
+                  <option value="Donald Ross">Donald Ross</option>
+                  <option value="DS Font">DS Font</option>
+                  <option value="Garrett Moretz">Garrett Moretz</option>
+                  <option value="George Hughes">George Hughes</option>
+                  <option value="Harriet DeLaughter Print">Harriet DeLaughter (Print Version)</option>
+                  <option value="Harriet DeLaughter Cursive">Harriet DeLaughter (Cursive Version)</option>
+                  <option value="Herbert Cooper">Herbert Cooper</option>
+                  <option value="Jeff Dungan">Jeff Dungan</option>
+                  <option value="Kate Rothrock">Kate Rothrock</option>
+                  <option value="Hindi_Font">Kruti-dev(Hindi)</option>
+                  <option value="John Caplin">John Caplin</option>
+                  <option value="John Williams">John Williams</option>
+                  <option value="Julian Dean">Julian Dean</option>
+                  <option value="Kevin Knowles">Kevin Knowles</option>
+                  <option value="Kevin Shirley">Kevin Shirley</option>
+                  <option value="Kunjar Bhaduri">Kunjar Bhaduri</option>
+                  <option value="Mamas and Papas">Mamas and Papas</option>
+                  <option value="Pamela Rosenberry">Pamela Rosenberry</option>
+                  <option value="Philip Bean">Philip Bean</option>
+                  <option value="Royston Such">Royston Such</option>
+                  <option value="Royston Such CAP">Royston Such (Standard PLUS Version)</option>
+                  <option value="Rufus">Rufus</option>
+                  <option value="Ruth Stafford">Ruth Stafford</option>
+                  <option value="Sam Roberts">Sam Roberts</option>
+                  <option value="Sam Roberts 2">Sam Roberts (2)</option>
+                  <option value="Scott Williams">Scott Williams</option>
+                  <option value="Tim Doremus">Tim Doremus</option>
+                  <option style="font-family: 'Caveat', cursive; font-size: 13pt;" value="'Caveat', cursive">Caveat</option>
+                </select>
+                <small class="form-help">Choose from various handwriting styles</small>
+              </div>
+
+              <div class="form-group">
+                <label for="font-size" style="font-size: 1.25rem;">
+                  <i class="fas fa-text-height"></i> Font Size
+                </label>
+                <div class="input-with-unit">
+                  <input id="font-size" min="8" max="24" step="0.5" value="12" type="number" />
+                  <span class="unit">pt</span>
+                </div>
+                <small class="form-help">Adjust text size (8-24pt)</small>
+              </div>
+            </div>
+
+            <div class="category-grid">
+              <div class="form-group">
+                <h2 style="font-size: 1.2rem;"><i class="fas fa-upload"></i> Upload Custom Font</h2>
+                <p class="section-description">Have your own handwriting font? Upload it here!</p>
+                <input type="file" id="fontInput" accept=".ttf, .otf, .woff, .woff2">
+                <small class="form-help">Supported formats: TTF, OTF, WOFF, WOFF2</small>
+                <button onclick="uploadFont()" class="upload-btn secondary">
+                  <i class="fas fa-font"></i> Upload Font
+                </button>
+                <div id="fontResponse" class="response-message"></div>
+              </div>
+            </div>
+
+            <div class="category-grid">
+              <div class="form-group">
+                <label for="top-padding" style="font-size: 1.25rem;">
+                  <i class="fas fa-arrows-alt-v"></i> Vertical Position
+                </label>
+                <div class="input-with-unit">
+                  <input id="top-padding" min="0" max="100" value="20" type="number" />
+                  <span class="unit">px</span>
+                </div>
+                <small class="form-help">Adjust text position from top</small>
+              </div>
+
+              <div class="form-group">
+                <label for="word-spacing" style="font-size: 1.25rem;">
+                  <i class="fas fa-text-width"></i> Word Spacing
+                </label>
+                <div class="input-with-unit">
+                  <input id="word-spacing" min="0" max="20" value="2" type="number" />
+                  <span class="unit">px</span>
+                </div>
+                <small class="form-help">Space between words</small>
+              </div>
+
+              <div class="form-group">
+                <label for="letter-spacing" style="font-size: 1.25rem;">
+                  <i class="fas fa-kerning"></i> Letter Spacing
+                </label>
+                <div class="input-with-unit">
+                  <input id="letter-spacing" min="-2" max="10" value="0" type="number" />
+                  <span class="unit">pt</span>
+                </div>
+                <small class="form-help">Space between letters</small>
+              </div>
+            </div>
+
+
+            <div style="display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; margin-top: 20px;">
+              <div class="option-card">
+                <label style="display: block; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 1.2rem;" for="page-effects">
+                  <i class="fas fa-magic"></i> <strong>Visual Effects</strong>
+                </label>
+                <p class="card-description">Add realistic effects to make your handwriting look more authentic</p>
+                <select id="page-effects" style="padding: 8px; font-size: 16px; width: 100%; font-family: Arial, sans-serif; border-radius: 5px;">
+                  <option default value="shadows" style="padding: 5px;">✨ Shadows (Realistic)</option>
+                  <option value="scanner" style="padding: 5px;">📄 Scanner Effect</option>
+                  <option value="no-effect" style="padding: 5px;">📝 Clean (No Effect)</option>
+                </select>
+              </div>
+              
+              <div class="option-card">
+                <label style="display: block; margin-bottom: 10px; font-family: Arial, sans-serif; font-size: 1.2rem;" for="paper-file">
+                  <i class="fas fa-image"></i> <strong>Custom Paper Background</strong>
+                </label>
+                <p class="card-description">Upload your own paper texture for a personalized look</p>
+                <input type="file" id="paper-file" accept="image/jpeg,image/png,image/jpg" style="width: 100%; padding: 8px; border-radius: 5px;">
+                <small class="form-help">Optional: JPG, PNG formats supported</small>
+              </div>
+            </div>
+
+            <div class="category-grid" style="background-color: transparent; border: none; box-shadow: none; margin-left: -2rem;">
+              <div class="form-group">
+                <label class="block" for="ink-color" style="font-size: 1.25rem;">
+                  <i class="fas fa-tint"></i> Pen Color
+                </label>
+                <select id="ink-color" style="font-size: 1.2rem;">
+                  <option default value="#000f55">🔵 Blue</option>
+                  <option value="black">⚫ Black</option>
+                  <option value="#ba3807">🔴 Red</option>
+                  <option value="green">🟢 Green</option>
+                  <option value="#B197FC">✨ Theme Special</option>
+                </select>
+                <small class="form-help">Choose your preferred ink color</small>
+              </div>
+              <div id="color-display" style="margin-top: 10px; width: 30px; height: 30px; border: 2px solid #ccc; background-color: #000f55; border-radius: 50%;"></div>
+            </div>
+
+            <!-- GENERATE IMAGE BUTTONS -->
+            <hr style="border: 0.3px solid var(--elevation-background); width: 80%;" />
+            <div style="text-align: center; padding: 30px 0px;">
+              <button type="submit" data-testid="generate-image-button" class="button generate-image-button" style="font-size: 1.7rem;">
+                <i class="fas fa-magic"></i> Generate Handwritten Sheet
+              </button>
+              <p class="button-description">Click to create your customized handwritten assignment</p>
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- OUTPUT -->
+    <section class="output-section">
+      <h2 id="output-header"><i class="fas fa-images"></i> Generated Results</h2>
+      <div id="output" class="output" style="text-align: center;">
+        <div class="output-placeholder">
+          <i class="fas fa-file-image fa-3x" style="color: #ccc; margin-bottom: 20px;"></i>
+          <p>Your handwritten assignment will appear here</p>
+          <small>Click "Generate Handwritten Sheet" to get started</small>
+        </div>
+      </div>
+      <div style="text-align: center; padding: 30px;">
+        <button class="imp-button" id="download-as-pdf-button">
+          <i class="fas fa-download"></i> Download All as PDF
+        </button>
+        <button class="delete-button" id="delete-all-button">
+          <i class="fas fa-trash"></i> Clear All
+        </button>
+      </div>
+    </section>
+
+
+  </main>
+
+
+  <!-- Fixed Elements -->
+  <section class="draw-container popup-container">
+    <button class="close-button">&times;</button>
+    <div class="display-flex responsive-flex">
+      <canvas id="diagram-canvas" style="background-color: #fff;" height="300px" width="600px"></canvas>
+      <div class="flex-1 buttons-container padding-around">
+        <button id="add-to-paper-button" style="margin-top: 5px; margin-bottom: 5px;">
+          Add to Paper
+        </button>
+        <button id="draw-download-button" style="margin-top: 5px; margin-bottom: 5px;">
+          Download Image
+        </button>
+        <br /><br />
+        <input type="file" id="image-to-add-in-canvas" accept="image/x-png,image/jpeg" hidden="hidden" />
+        <br /><br /><button id="add-new-image-button">Add bg image</button>
+        <br /><br />
+        <button id="clear-draw-canvas" class="blue-button" style="background-color: #f30; color: #fff;">
+          Clear Canvas
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <!--about us-->
+
+
+  <section class="about" id="about">
+    <h1 class="heading"><span>About</span>us</h1>
+    <div class="row">
+      <div class="image">
+        <img src="image/aboutus.jpg" alt="">
+      </div>
+      <div class="content">
+
+        <p>Hey there! So, you stumbled upon our little corner of the internet, huh? Buckle up, because things are about
+          to get funky!
+          <br><br>
+          <strong>Story time: </strong> The Stuff of Legends: Once upon a time (well, not that long ago, really),
+          a bunch of Students decided not to write their assignment because they were fed up so they turn their wild
+          ideas into reality.
+          Fast forward through countless bunk of classes, endless scolding of teachers, and a few too many breakup story
+          nights in my words(randi rone).
+          Here we are, done with our assignment. 
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+  <!--footer-->
+
+  <section class="footer">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section about">
+          <h3>About AssignMe</h3>
+          <p>Convert your assignments to beautiful handwritten documents with customizable fonts and effects.</p>
+          <p class="made-by">Made with ❤️ by <strong>Rajan</strong></p>
+        </div>
+
+        <div class="footer-section links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#upload">Upload Assignment</a></li>
+            <li><a href="#customize">Customize</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section social">
+          <h3>Connect with Me</h3>
+          <div class="social-links">
+            <a href="https://github.com/yourusernameRajan167030" target="_blank" class="social-link github">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/rajan-jha-4a921828a/" target="_blank" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-section references">
+          <h3>References</h3>
+          <p>Github, Node community, GenAI, Open-source</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 AssignMe. All rights reserved. | Made by Rajan</p>
+          <div class="footer-tech">
+            <span>Built with HTML, CSS & JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--custom js file link-->
+
+  <script src="js/script.js"></script>
+
+  <script src="./canvaPage/js/vendors/html2canvas.min.js" crossorigin="anonymous"></script>
+  <script type="module" src="/canvaPage/js/app.mjs"></script>
+  <script defer src="https://unpkg.com/jspdf@^1/dist/jspdf.min.js"></script>
+
+  <script>
+    document.getElementById('ink-color').addEventListener('change', function () {
+      var color = this.value;
+      document.getElementById('color-display').style.backgroundColor = color;
+    });
+  </script>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const themeSwitch = document.getElementById('theme-switch');
+    const body = document.body;
+
+    // Check for saved theme preference or default to light mode
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      body.classList.add('dark-mode');
+      themeSwitch.checked = true;
+    }
+
+    // Toggle theme
+    themeSwitch.addEventListener('change', function() {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+  </script>
+
+  <!--updated code 1.5-->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    const url = "https://test2-sfwm.onrender.com/process-file/";
+
+    function uploadFile() {
+      const fileInput = document.getElementById('fileInput');
+      const subjectInput = document.getElementById('subjectInput');
+      const file = fileInput.files[0];
+      const subject = subjectInput.value;
+      const noteElement = document.getElementById('note');
+
+      if (!file || !subject) {
+        alert("Please select a file and enter a subject.");
+        return;
+      }
+
+
+      noteElement.innerHTML = `
+            <div style="text-align: center; margin-top:4rem;">
+                <div class="loader"></div>
+                <p style="margin-top: 10px;">This may take a few seconds...</p>
+            </div>
+        `;
+
+      // Use browser's native FormData instead of the Node.js form-data package
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("subject", subject);
+
+      axios.post(url, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        },
+      })
+        .then(function (response) {
+
+          let formattedResponse = response.data;
+          formattedResponse = formattedResponse.replace(/\*\*/g, '');
+          formattedResponse = formattedResponse.replace(/\*/g, '&#9679;');
+          formattedResponse = formattedResponse.split('\n').map(line => `<p>${line}</p>`).join('');
+          noteElement.innerHTML = formattedResponse;
+        })
+        .catch(function (error) {
+          console.error("Error:", error);
+          noteElement.innerHTML = "<p>An error occurred while uploading the file. Please try again.</p>";
+        });
+    }
+
+
+
+
+
+
+
+    function uploadFont() {
+      const fontInput = document.getElementById('fontInput');
+      const file = fontInput.files[0];
+
+      if (!file) {
+        alert("Please select a font file.");
+        return;
+      }
+
+      const reader = new FileReader();
+      reader.onload = function (event) {
+        const fontData = event.target.result;
+        const fontName = file.name.split('.').slice(0, -1).join('.');
+
+        // Create a new style element
+        const style = document.createElement('style');
+        style.innerHTML = `
+        @font-face {
+          font-family: '${fontName}';
+          src: url(${fontData}) format('truetype');
+        }
+      `;
+
+        // Append the style element to the document head
+        document.head.appendChild(style);
+
+        // Add the new font to the dropdown menu
+        const fontDropdown = document.getElementById('handwriting-font');
+        const option = document.createElement('option');
+        option.value = fontName;
+        option.style.fontFamily = fontName;
+        option.text = fontName;
+        fontDropdown.add(option);
+
+        document.getElementById('fontResponse').innerText = `Your Font "${fontName}" is ready select it from handwriting font section`;
+      };
+
+      reader.readAsDataURL(file);
+    }
+  </script>
+
+
+
+</body>
+
+</html>

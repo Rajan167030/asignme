@@ -1,0 +1,662 @@
+/* CSS Variables */
+html,
+body {
+  margin: 0px;
+}
+body {
+  --background-primary: #fff;
+  --font-color-primary: #333;
+  --elevation-background: #f3f3f3;
+  --link-color: #006eb8;
+  --font-family-primary: 'Roboto', Arial;
+  --handwriting-font: 'Gloria Hallelujah', cursive;
+  --primary-color: #1a73e8;
+  --ink-color: #000f55;
+  --label-color: #333;
+  --field-borders: #e0e0e0;
+  --primary-button-bg: #1d1d1d;
+  --primary-button-color: #eee;
+  --font-color-delete: #dc3545;
+  --delete-button-borders: #dc3545;
+
+  width: 100%;
+  overflow-x: hidden;
+}
+body.dark {
+  --background-primary: #121212;
+  --font-color-primary: #ccc;
+  --elevation-background: #1d1d1d;
+  --link-color: #09f;
+  --label-color: #aaa;
+  --field-borders: #222;
+  --primary-button-bg: #eee;
+  --primary-button-color: #111;
+  --delete-button-borders: #e76f7b;
+  --font-color-delete: #e76f7b;
+}
+@font-face {
+  font-family: 'Hindi_Font';
+  src: url(../fonts/Hindi_Type.ttf);
+}
+
+@font-face {
+  font-family: 'Beverly Smith';
+  src: url('../fonts/QEBEV.ttf');
+}
+
+@font-face {
+  font-family: 'Braden Hill';
+  src: url('../fonts/QEBradenHill.ttf');
+}
+
+@font-face {
+  font-family: 'Caroline Mutiboko';
+  src: url('../fonts/QECarolineMutiboko.ttf');
+}
+
+@font-face {
+  font-family: 'David Mergens';
+  src: url('../fonts/QEDaveMergens.ttf');
+}
+
+@font-face {
+  font-family: 'David Reid';
+  src: url('../fonts/QEDavidReid.ttf');
+}
+
+@font-face {
+  font-family: 'David Reid CAP';
+  src: url('../fonts/QEDavidReidCAP.ttf');
+}
+
+@font-face {
+  font-family: 'Donald Ross';
+  src: url('../fonts/QEDonaldRoss.ttf');
+}
+
+@font-face {
+  font-family: 'DS Font';
+  src: url('../fonts/QEDSFont.ttf');
+}
+
+@font-face {
+  font-family: 'Garrett Moretz';
+  src: url('../fonts/QEGarrettWMoretz.ttf');
+}
+
+
+@font-face {
+  font-family: 'George Hughes';
+  src: url('../fonts/QEGHHughes.ttf');
+}
+
+@font-face {
+  font-family: 'Harriet DeLaughter Print';
+  src: url('../fonts/QEPrintVersion.ttf');
+}
+
+@font-face {
+  font-family: 'Harriet DeLaughter Cursive';
+  src: url('../fonts/QECursiveVersion.ttf');
+}
+
+@font-face {
+  font-family: 'Herbert Cooper';
+  src: url('../fonts/QEHerbertCooper.ttf');
+}
+
+@font-face {
+  font-family: 'Jeff Dungan';
+  src: url('../fonts/QEJeffDungan.ttf');
+}
+
+@font-face {
+  font-family: 'Kate Rothrock';
+  src: url('../fonts/QEJER.ttf');
+}
+
+@font-face {
+  font-family: 'John Caplin';
+  src: url('../fonts/QEJohnCaplin.ttf');
+}
+
+@font-face {
+  font-family: 'John Williams';
+  src: url('../fonts/QEJohnWilliams.ttf');
+}
+
+@font-face {
+  font-family: 'Julian Dean';
+  src: url('../fonts/QEJulianDean.ttf');
+}
+
+@font-face {
+  font-family: 'Kevin Knowles';
+  src: url('../fonts/QEKevinKnowles.ttf');
+}
+
+@font-face {
+  font-family: 'Kevin Shirley';
+  src: url('../fonts/QEKevinShirley.ttf');
+}
+
+@font-face {
+  font-family: 'Kunjar Bhaduri';
+  src: url('../fonts/QEKunjarScript.ttf');
+}
+
+@font-face {
+  font-family: 'Mamas and Papas';
+  src: url('../fonts/QEMamasAndPapas.ttf');
+}
+
+@font-face {
+  font-family: 'Pamela Rosenberry';
+  src: url('../fonts/QEPamRosenberry.ttf');
+}
+
+@font-face {
+  font-family: 'Philip Bean';
+  src: url('../fonts/QEPhilipBean.ttf');
+}
+
+@font-face {
+  font-family: 'Royston Such';
+  src: url('../fonts/QERoystonSuch.ttf');
+}
+
+@font-face {
+  font-family: 'Royston Such CAP';
+  src: url('../fonts/QERoystonSuchCAP.ttf');
+}
+
+@font-face {
+  font-family: 'Rufus';
+  src: url('../fonts/QERufus.ttf');
+}
+
+@font-face {
+  font-family: 'Ruth Stafford';
+  src: url('../fonts/QERuthStafford.ttf');
+}
+
+@font-face {
+  font-family: 'Sam Roberts';
+  src: url('../fonts/QESamRoberts.ttf');
+}
+
+@font-face {
+  font-family: 'Sam Roberts 2';
+  src: url('../fonts/QESamRoberts2.ttf');
+}
+
+@font-face {
+  font-family: 'Scott Williams';
+  src: url('../fonts/QEScottWilliams.ttf');
+}
+
+@font-face {
+  font-family: 'Tim Doremus';
+  src: url('../fonts/QETimDoremus.ttf');
+}
+
+@font-face {
+  font-family: 'Happy Font';
+  src: url('../fonts/output_font.ttf');
+}
+
+@font-face {
+  font-family: 'Happy_Font';
+  src: url('../fonts/generated_font.ttf');
+}
+
+
+/* Default CSS Changes */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-primary);
+  color: var(--font-color-primary);
+  padding: 100px 100px;
+  font-size: 1.05rem;
+  font-family: var(--font-family-primary);
+}
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+section {
+  padding: 20px 0px;
+}
+button {
+  border: none;
+  background-color: var(--elevation-background);
+  color: var(--font-color-primary);
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+label {
+  color: var(--label-color);
+  font-size: 0.75rem;
+}
+
+label.block {
+  display: block;
+  padding-bottom: 5px;
+}
+
+select {
+  background: url('../images/dropdown.svg') no-repeat;
+  background-position: calc(100% - 14px) center;
+  border: none;
+  color: #333;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  display: block;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+option {
+  color: #333;
+}
+
+body.dark select {
+  background: url('../images/dropdown-white.svg') no-repeat;
+  background-position: calc(100% - 14px) center;
+}
+
+input {
+  padding: 8px 13px;
+  border-radius: 4px;
+  border: 1px solid var(--elevation-background);
+  color: var(--font-color-primary);
+  background-color: transparent;
+  display: block;
+}
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield !important;
+  -webkit-appearance: none;
+  width: 100%;
+}
+
+/* global classes */
+ul.info-ul {
+  padding-left: 20px;
+}
+
+ul.info-ul > li {
+  padding: 5px 5px;
+}
+
+.shadow {
+  box-shadow: 12px 12px 24px 0 rgba(0, 0, 0, 0.2);
+}
+.display-flex {
+  display: flex;
+}
+.display-flex.padded-flex > div {
+  padding: 0px 10px;
+}
+.display-flex.padded-flex > div:first-child {
+  padding-left: unset;
+}
+.flex-1 {
+  flex: 1;
+}
+.padding-around {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.padding-up-down {
+  padding-top: 6px;
+  padding-bottom: 7px;
+}
+
+/* Other Styles */
+.generate-image-section {
+  padding: 10px 10px;
+  font-size: 1.2rem;
+}
+.generate-image-button {
+  background-color: var(--primary-button-bg);
+  color: var(--primary-button-color);
+  font-size: 1rem;
+}
+.github-corner {
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+  right: 0px;
+}
+body.dark .github-corner {
+  filter: invert(100%);
+}
+.imp-button {
+  color: whitesmoke;
+  background-color: #b4a3ff;
+}
+.delete-button {
+  color: whitesmoke;
+  background-color: #DC143C;
+}
+.customization-col {
+  padding: 0px 50px !important;
+}
+
+.left-margin-and-content {
+  min-height: calc(100% - 50px);
+}
+
+
+.page-a {
+  width: 400px;
+  height: calc(11.7 * 400px / 8.3); /* A4 Ratio */
+  background: #fff;
+  border: 1px solid var(--elevation-background);
+  font-size: 10pt;
+  position: relative;
+  top: 0px;
+  font-family: var(--handwriting-font);
+  color: var(--ink-color);
+  line-height: 1.5em;
+  overflow-y: auto;
+  scrollbar-color: transparent;
+  scrollbar-width: thin;
+}
+.paper-content {
+  margin: 10px;
+  width: 100%;
+}
+.page-a.lines .paper-content {
+  background-image: linear-gradient(#999 0.05em, transparent 0.1em);
+  background-color: unset !important;
+  background-size: 100% 1.5em;
+}
+
+.margined .paper-content {
+  padding: 5px;
+  margin: 0px;
+  padding-left: 55px;
+}
+
+.left-margin,
+.top-margin {
+  display: none;
+}
+
+.margined .top-margin {
+  height: 50px;
+  border-bottom: 2px solid pink;
+  width: 100%;
+  display: block;
+  overflow-y: auto;
+}
+
+.margined .left-margin {
+  width: 50px;
+  height: calc(100%);
+  display: inline-block;
+  border-right: 2px solid pink;
+  top: 0px;
+  padding-top: 50px;
+  overflow-x: hidden;
+  position: absolute;
+  left: 0;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+.overlay.shadows {
+  display: block;
+  
+}
+
+/* OUTPUT */
+.output {
+  width: 100%;
+  padding: 30px;
+  white-space: nowrap;
+  overflow-x: auto;
+  border: 1px solid var(--elevation-background);
+}
+.output .close-button {
+  position: absolute;
+  right: -3px;
+  top: -11px;
+  border-radius: 100%;
+  padding: 4px 10px;
+  background-color: #B22222;
+  color: #fff;
+  font-size: 15pt;
+  font-weight: bold;
+}
+.download-image-button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  background-color: #1d1d1d;
+  color: #ccc;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 10px 15px;
+  border-radius: 8px;
+}
+#download-as-pdf-button {
+  display: none;
+}
+#download-as-pdf-button.show {
+  display: inline-block;
+}
+#delete-all-button {
+  display: none;
+}
+#delete-all-button.show {
+  display: inline-block;
+}
+.output img {
+  width: 300px;
+  margin: 0px 10px;
+}
+
+#faq p {
+  overflow-wrap: break-word;
+  overflow: hidden;
+  width: 100%;
+}
+
+#covid-donations ul li {
+  padding: 5px 0px;
+}
+
+.donations-list {
+  padding: 58px 0px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 100px 10px;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: 3rem;
+  }
+  .padding-around {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .display-flex.responsive-flex {
+    flex-direction: column;
+  }
+  .customization-col {
+    padding: 100px 5px !important;
+  }
+  .page-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  .page-container-super {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .output img {
+    width: 200px;
+    margin: 0px 10px;
+  }
+
+  
+}
+
+fieldset {
+  padding: 17px 20px;
+  border-radius: 5px;
+  border: 1px solid var(--field-borders);
+  margin-top: 16px;
+}
+
+legend {
+  font-size: 0.88rem;
+  padding: 0px 6px;
+  color: var(--font-color-primary);
+}
+
+select,
+input {
+  width: 100%;
+  border: 1px solid var(--field-borders);
+  padding: 10px;
+  padding-right: 30px;
+  color: var(--font-color-primary);
+}
+
+input[type='file']::-webkit-file-upload-button {
+  display: none;
+}
+input[type='file']::before {
+  content: 'Choose File';
+  display: inline-block;
+  background-color: var(--background-primary);
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+.postfix-input {
+  position: relative;
+}
+.postfix-input label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.postfix-input::after {
+  content: attr(data-postfix);
+  position: absolute;
+  right: 25px;
+  bottom: 12px;
+  font-size: 12px;
+}
+
+.category-grid {
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.category-grid > div {
+  background-color: #ffffff;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+.category-grid > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f0f0f0;
+}
+
+.category-grid > div > h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.category-grid > div > p {
+  font-size: 14px;
+  color: #666;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.category-grid > div {
+  animation: fadeIn 0.5s ease-out;
+}
+
+
+.fade-in-dark,
+.fade-in-light {
+  transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-auto-flow: row;
+    grid-auto-rows: 1fr;
+  }
+}
+
+/*To generate margin between download as pdf and delete button in small screens*/
+@media (max-width: 430px) {
+  .delete-button {
+    margin-top: 10px;
+  }
+}
+
+
+
+
+

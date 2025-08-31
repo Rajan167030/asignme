@@ -1,0 +1,7 @@
+requests
+fastapi
+uvicorn
+google-generativeai
+PyMuPDF
+Pillow
+python-multipart

@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="author" content="doassignment">
+    <meta name="copyright" content="doassignment">
+
+
+    <!---Helps control how search engine bots crawl and index the content on your website.-->
+    <meta name="robots" content="index, follow">
+
+
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="to do assignment">
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+
+
+    <title>doassignment</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Caveat:wght@400;700&family=Liu+Jian+Mao+Cao&family=Pacifico&family=Indie+Flower&family=Shadows+Into+Light&family=Amatic+SC:wght@400;700&family=Dancing+Script:wght@400;700&family=Satisfy&family=Gloria+Hallelujah&family=Patrick+Hand&family=Kalam:wght@300;400;700&family=Reenie+Beanie&family=Zeyada&family=Handlee&family=Just+Another+Hand&family=Love+Ya+Like+A+Sister&family=Covered+By+Your+Grace&family=Architects+Daughter&family=Sue+Ellen+Francisco&family=Bad+Script&family=Rock+Salt&family=Yesteryear&family=Qwitcher+Grypen&family=Delius+Swash+Caps&family=Give+You+Glory&family=Kaushan+Script&family=Pinyon+Script&family=Pangolin&family=La+Belle+Aurore&family=Redressed&family=Allura&family=Herr+Von+Muellerhoff&display=swap"
+        rel="stylesheet">
+
+    <!--font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- fav icon -->
+
+    <link rel="shortcut icon" type="image/x-icon" href="image/icon.png">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="./canvaPage/css/index.css" />
+    <link rel="stylesheet" href="./canvaPage/css/features.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <section class="flex">
+            <a href="index.html" class="logo">
+                <img src="image/logo.png" alt="assignme Logo">
+            </a>
+
+            <nav class="navbar">
+                <a href="captureimg/index.html"><span>Own Handwriting</span></a>
+                <a href="docs.html"><span>Docs</span></a>
+                <a href="#about"><span>About</span></a>
+                <a href="contactus.html"><span>Feedback</span></a>
+            </nav>
+
+            <div id="menu-btn">Menu</div>
+        </section>
+
+
+    </header>
+    <section class="home" id="home">
+        <div class="row" style="margin-top: 1rem;">
+            <div class="image" >
+                <img src="image/docs/docs.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 style="font-size: 5rem;">Documentation <span>Guide</span></h3>
+                <h4>Learn how to use AssignMe to convert assignments to handwritten documents and create your own
+                    handwriting fonts.</h4>
+                <div class="button-group">
+                    <a href="#assignment-section" class="btn" style="background-color: black; color: #fff;">Assignment
+                        Converter</a>
+                    <a href="#custom-font-section" class="btn" style="background-color: #333; color: #fff;">Custom
+                        Handwriting</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table of Contents -->
+    <section class="docs-toc" id="quick-guide">
+        <h2 class="heading">Quick <span>Navigation</span></h2>
+        <div class="toc-container">
+            <div class="toc-section">
+                <h3>Assignment to Handwriting</h3>
+                <ul>
+                    <li><a href="#file-upload">Uploading Assignment Files</a></li>
+                    <li><a href="#handwriting-customization">Customizing Handwriting</a></li>
+                    <li><a href="#generating-documents">Generating Documents</a></li>
+                    <li><a href="#downloading-options">Downloading Options</a></li>
+                </ul>
+            </div>
+            <div class="toc-section">
+                <h3>Custom Handwriting Font</h3>
+                <ul>
+                    <li><a href="#font-capture">Capturing Your Handwriting</a></li>
+                    <li><a href="#best-practices">Best Practices</a></li>
+                    <li><a href="#using-custom-font">Using Your Custom Font</a></li>
+                </ul>
+            </div>
+            <div class="toc-section">
+                <h3>Additional Resources</h3>
+                <ul>
+                    <li><a href="#troubleshooting">Troubleshooting</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                    <li><a href="#tips">Tips & Tricks</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Documentation Content -->
+    <section class="docs-section" id="assignment-section">
+        <h2 class="heading">Assignment to <span>Handwriting</span></h2>
+
+        <!-- 1. File Upload Section -->
+        <div class="docs-content" id="file-upload">
+            <h3>1. Uploading Assignment Files</h3>
+            <div class="step-container">
+                <div class="step-content">
+                    <p>Begin by navigating to the home page and locate the file upload section.</p>
+                    <ol>
+                        <li>Click on the <strong>"Choose File"</strong> button to select your assignment document (PDF
+                            or image).</li>
+                        <li>Enter the <strong>subject name</strong> in the provided field for more accurate processing.
+                        </li>
+                        <li>Click the <strong>"Upload"</strong> button to send your file for processing.</li>
+                        <li>Wait while the system processes your assignment and converts it to text.</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Note:</strong> Supported file formats include PDF, JPG, PNG, and JPEG. For best
+                            results, ensure your assignment questions are clearly visible in the document.</p>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="image/docs/file-upload.jpg" alt="File Upload Interface">
+                    <p class="caption">File upload section on the home page</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Handwriting Customization -->
+        <div class="docs-content" id="handwriting-customization">
+            <h3>2. Customizing Your Handwriting</h3>
+            <div class="step-container">
+                <div class="step-content">
+                    <p>After your document is processed, you can customize how your handwritten document will look.</p>
+                    <h4>Handwriting Font Options:</h4>
+                    <ul>
+                        <li><strong>Font Selection:</strong> Choose from over 30 handwriting styles from the dropdown
+                            menu.</li>
+                        <li><strong>Font Size:</strong> Adjust the size of your handwriting (recommended range: 8-15pt).
+                        </li>
+                        <li><strong>Custom Font:</strong> Upload your own font file or use a font created in the "Own
+                            Handwriting" section.</li>
+                    </ul>
+
+                    <h4>Layout Adjustments:</h4>
+                    <ul>
+                        <li><strong>Vertical Position:</strong> Control where text begins on the page.</li>
+                        <li><strong>Word Spacing:</strong> Adjust spacing between words (0-100px).</li>
+                        <li><strong>Letter Spacing:</strong> Control spacing between letters (-5 to 40pt).</li>
+                    </ul>                    <h4>Appearance Options:</h4>
+                    <ul>
+                        <li><strong>Effects:</strong> Choose between Shadows, Scanner, or No Effect.</li>
+                        <li><strong>Custom Paper Background:</strong> Upload your own paper texture or background image.</li>
+                        <li><strong>Pen Color:</strong> Select Blue, Black, Red, or Green ink.</li>
+                    </ul>
+                </div>
+                <div class="step-image">
+                    <img src="image/docs/customization.jpg" alt="Handwriting Customization Panel">
+                    <p class="caption">Handwriting customization panel with options</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Generating Documents -->
+        <div class="docs-content" id="generating-documents">
+            <h3>3. Generating Your Handwritten Document</h3>
+            <div class="step-container">
+                <div class="step-content">                    <p>Once you're satisfied with your customization settings:</p>
+                    <ol>
+                        <li>Review the content in the paper preview area.</li>
+                        <li>Make any necessary edits directly in the paper content area (it's editable!).</li>
+                        <li>If desired, upload a custom paper background image to personalize your document's appearance.</li>
+                        <li>Click the <strong>"Generate Sheet"</strong> button to create your handwritten document.</li>
+                        <li>The system will process your text and display the generated handwritten image below.</li>
+                    </ol>
+                    <div class="tip-box">
+                        <p><strong>Tip:</strong> For longer assignments, the system will automatically create multiple
+                            pages. You can regenerate with different settings if you're not satisfied with the result.
+                        </p>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="image/docs/generate.jpg" alt="Generate Sheet Button and Result">
+                    <p class="caption">Generate button and resulting handwritten document</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Downloading Options -->
+        <div class="docs-content" id="downloading-options">
+            <h3>4. Downloading Your Handwritten Documents</h3>
+            <div class="step-container">
+                <div class="step-content">
+                    <p>After generating your handwritten documents, you have two download options:</p>
+                    <ul>
+                        <li><strong>Download All Images as PDF:</strong> Combines all generated pages into a single PDF
+                            document.</li>
+                        <li><strong>Individual Image Download:</strong> Click on any individual image to download it
+                            separately.</li>
+                        <li><strong>Clear All Images:</strong> Removes all generated images if you want to start over.
+                        </li>
+                    </ul>
+                    <p>The downloaded files can be printed or submitted digitally as needed for your assignments.</p>
+                </div>
+                <div class="step-image">
+                    <img src="image/docs/download.jpg" alt="Download Options">
+                    <p class="caption">Download options for handwritten documents</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Handwriting Font Section -->
+    <section class="docs-section" id="custom-font-section">
+        <h2 class="heading">Create Your <span>Own Handwriting</span></h2>
+
+        <!-- 1. Font Capture -->
+        <div class="docs-content" id="font-capture">
+            <h3>1. Capturing Your Handwriting</h3>
+            <div class="step-container">
+                <div class="step-content">
+                    <p>To create your custom handwriting font:</p>
+                    <ol>
+                        <li>Navigate to the <strong>"Own Handwriting"</strong> section from the navigation menu.</li>
+                        <li>Choose between using your camera or uploading images of your handwriting samples.</li>
+                        <li>If using camera: Position your handwritten sample within the frame and capture.</li>
+                        <li>If uploading: Select clear images of your handwriting samples.</li>
+                        <li>Submit your samples to generate your custom font.</li>
+                    </ol>
+                </div>
+                <div class="step-image">
+                    <img src="image/docs/font-capture.jpg" alt="Handwriting Capture Interface">
+                    <p class="caption">Handwriting capture & submission interface</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Best Practices -->
+        <div class="docs-content" id="best-practices">
+            <h3>2. Best Practices for Handwriting Samples</h3>
+            <div class="step-container">
+                <div class="step-content">
+                    <h4>Do's:</h4>
+                    <ul>
+                        <li>Write within the designated boxes</li>
+                        <li>Align your writing with the guidelines</li>
+                        <li>Take clear, straight photos</li>
+                        <li>Use a black pen on plain white paper</li>
+                        <li>Write naturally as you normally would</li>
+                    </ul>
+
+                    <h4>Don'ts:</h4>
+                    <ul>
+                        <li>Don't write outside the guidelines</li>
+                        <li>Avoid shadowy or poorly lit photos</li>
+                        <li>Don't use light-colored pens</li>
+                        <li>Avoid ruled or colored paper</li>
+                    </ul>
+                </div>
+                <div class="step-image">
+                    <div class="multi-image">
+                        <div>
+                            <img src="image/do.jpeg" alt="Good Handwriting Sample">
+                            <p>Good Example</p>
+                        </div>
+                        <div>
+                            <img src="image/dont.jpeg" alt="Bad Handwriting Sample">
+                            <p>Poor Example</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Using Custom Font -->
+        <div class="docs-content" id="using-custom-font">
+            <h3>3. Using Your Custom Handwriting Font</h3>
+            <div class="step-container">
+                <div class="step-content">
+                    <p>Once your custom font is generated:</p>
+                    <ol>
+                        <li>Return to the main page (Assignment to Handwriting section).</li>
+                        <li>In the Handwriting Options panel, find your custom font in the dropdown list.</li>
+                        <li>Select your font to apply it to your document.</li>
+                        <li>Adjust other settings as needed and generate your document.</li>
+                    </ol>
+                    <div class="note-box">
+                        <p><strong>Note:</strong> Custom fonts are stored in your browser. If you clear your browser
+                            data, you may need to recreate your font.</p>
+                    </div>
+                </div>
+                <div class="step-image">
+                    <img src="image/docs/custom-font-use.jpg" alt="Using Custom Font in Options Panel">
+                    <p class="caption">Using your custom font in the options panel</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources Section -->
+    <section class="docs-section" id="additional-resources">
+        <h2 class="heading">Additional <span>Resources</span></h2>
+
+        <!-- 1. Troubleshooting -->
+        <div class="docs-content" id="troubleshooting">
+            <h3>Troubleshooting Common Issues</h3>
+
+            <div class="faq-item">
+                <h4>File Upload Errors</h4>
+                <p>If you encounter issues uploading your file:</p>
+                <ul>
+                    <li>Ensure the file is in a supported format (PDF, JPG, PNG, JPEG)</li>
+                    <li>Check that the file size is under 10MB</li>
+                    <li>Try a different browser if the issue persists</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h4>Text Processing Issues</h4>
+                <p>If your text isn't processed correctly:</p>
+                <ul>
+                    <li>Make sure the document is clear and legible</li>
+                    <li>Try uploading a higher quality image/scan</li>
+                    <li>You can always edit the text manually in the paper content area</li>
+                </ul>
+            </div>
+
+            <div class="faq-item">
+                <h4>Font Generation Problems</h4>
+                <p>If your custom font isn't generating properly:</p>
+                <ul>
+                    <li>Ensure your handwriting samples follow the guidelines</li>
+                    <li>Use better lighting when capturing samples</li>
+                    <li>Make sure you're using a black pen on white paper</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 2. FAQ -->
+        <div class="docs-content" id="faq">
+            <h3>Frequently Asked Questions</h3>
+
+            <div class="faq-item">
+                <h4>Is my assignment data secure?</h4>
+                <p>Yes, your assignment data is processed securely and is not stored permanently on our servers after
+                    processing.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I use this for any subject?</h4>
+                <p>Yes! AssignMe works for any subject. Providing the subject name helps improve the processing
+                    accuracy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How many pages can I generate?</h4>
+                <p>There is no hard limit on pages, but very large documents may take longer to process.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I save my custom handwriting for later use?</h4>
+                <p>Yes, custom fonts are saved in your browser's local storage for future use.</p>
+            </div>            <div class="faq-item">
+                <h4>Is AssignMe free to use?</h4>
+                <p>Yes, all features are currently available for free.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>What kind of paper backgrounds can I use?</h4>
+                <p>You can upload any image file (JPG, PNG) to use as paper background. Common choices include lined notebook paper, graph paper, or specialty stationery images.</p>
+            </div>
+        </div>
+
+        <!-- 3. Tips & Tricks -->
+        <div class="docs-content" id="tips">
+            <h3>Tips & Tricks</h3>
+
+            <div class="tips-container">
+                <div class="tip-item">                    <h4>For the Most Realistic Results</h4>
+                    <ul>
+                        <li>Experiment with different font sizes (9-12pt often looks most realistic)</li>
+                        <li>Add slight letter spacing (1-2pt) for a natural look</li>
+                        <li>Upload a custom paper background image (like lined paper or textured stationery)</li>
+                        <li>Use the Scanner effect for a more authentic appearance</li>
+                        <li>Blue ink tends to look most like an actual pen on paper</li>
+                    </ul>
+                </div>
+
+                <div class="tip-item">
+                    <h4>For Faster Processing</h4>
+                    <ul>
+                        <li>Use clear, well-scanned documents</li>
+                        <li>Break very large assignments into smaller sections</li>
+                        <li>Process one page at a time for complex documents</li>
+                    </ul>
+                </div>
+
+                <div class="tip-item">
+                    <h4>For Custom Handwriting</h4>
+                    <ul>
+                        <li>Create multiple samples for more natural variation</li>
+                        <li>Practice writing a sample first before capturing</li>
+                        <li>Use a smooth-writing pen for clearest results</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--footer-->
+
+    <section class="footer">
+
+        <h2>References: Github , Node community , OpenAI , Open-source</h2>
+
+        <div class="credit">&copy;2024<span>assignme.live</span>| All Rights Reserved.</div>
+
+    </section>
+
+
+
+    <!--custom js file link-->
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

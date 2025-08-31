@@ -1,0 +1,328 @@
+.image {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 90%; 
+    width: 500px;
+    text-align: center;
+    margin-left: 2.1rem;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transform: scale(1.8); 
+    transform-origin: center center; 
+    display: block;
+    margin: auto;
+}
+
+video:focus {
+    outline: none;
+}
+
+.grid-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.grid-line {
+    position: absolute;
+    background: white;
+}
+
+.grid-line.horizontal {
+    height: 2px;
+    width: 100%;
+}
+
+.grid-line.vertical {
+    width: 2px;
+    height: 100%;
+}
+
+/* Outer grid lines */
+.grid-line:nth-child(1) { top: 33.33%; }
+.grid-line:nth-child(2) { top: 66.66%; }
+.grid-line:nth-child(3) { left: 33.33%; }
+.grid-line:nth-child(4) { left: 66.66%; }
+
+/* Inner grid lines */
+.grid-line.inner {
+    position: absolute;
+    background: rgba(144, 238, 144, 0.5);
+}
+
+.grid-line.inner.horizontal {
+    height: 2px;
+    width: 33.33%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.grid-line.inner.vertical {
+    width: 2px; 
+    height: 33.33%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.grid-line.inner:nth-child(5) { top: 45%; left: 33.33%; }
+.grid-line.inner:nth-child(6) { top: 55%; left: 33.33%; }
+.grid-line.inner:nth-child(7) { top: 33.33%; left: 55%; }
+.grid-line.inner:nth-child(8) { top: 33.33%; left: 45%; }
+
+button {
+    background-color: #b4a3ff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #a238db;
+}
+
+#preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#preview img {
+    max-width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.circular-button {
+    border-radius: 50%;
+    width: 60px; 
+    height: 60px; 
+    background-color: #b4a3ff;
+    border: none;
+    cursor: pointer;
+    margin: 10px;
+    transition: background-color 0.3s;
+    position: relative; /* For positioning the inner ring */
+    border: 2px solid white; /* White ring effect */
+    box-shadow: 0 0 0 2px white inset; /* Inner shadow for the ring */
+}
+
+.circular-button:hover {
+    background-color: #a238db;
+}
+
+.circular-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 80%; /* Adjust to control ring width */
+    height: 80%; /* Adjust to control ring width */
+    background-color: #b4a3ff;
+    border: 2px solid white; /* Inner white ring */
+}
+
+#retakeButton , #flipButton {
+    background: transparent;
+    transform: translateY(-10px);
+    border: none; 
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+.img-container {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.img-container img {
+    max-width: 100px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.img-container button {
+    display: block;
+    margin-top: 10px;
+    background-color: #b4a3ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.img-container button:hover {
+    background-color: #a238db;
+}
+
+/* Fullscreen Loader and Message Overlays */
+
+#fullscreen-loader {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.6);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.loader-spinner {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #B197FC;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.loader-text {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+#message-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.4);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#message-overlay .message-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 32px 36px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 1.3rem;
+    min-width: 320px;
+    max-width: 90vw;
+    position: relative;
+}
+#message-overlay.success .message-box {
+    border-left: 8px solid #51cf66;
+}
+#message-overlay.error .message-box {
+    border-left: 8px solid #ff6b6b;
+}
+#message-overlay .icon {
+    font-size: 2.2rem;
+    margin-right: 10px;
+}
+#message-overlay .msg {
+    flex: 1;
+    color: #222;
+}
+#message-overlay.success .icon {
+    color: #51cf66;
+}
+#message-overlay.error .icon {
+    color: #ff6b6b;
+}
+#message-overlay .close-btn {
+    background: transparent;
+    border: none;
+    color: #888;
+    font-size: 2rem;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+#message-overlay .close-btn:hover {
+    color: #B197FC;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        padding: 8px 16px;
+        margin: 5px;
+    }
+
+    #preview img {
+        max-width: 80px;
+    }
+
+    #retakeButton , #flipButton {
+        transform: translateY(-8px);
+        
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .image {
+        margin-left: -.3rem; 
+        max-width: 100%;
+    }
+    
+    button {
+        padding: 6px 12px;
+        margin: 5px;
+    }
+
+    #preview img {
+        max-width: 60px;
+    }
+
+    #retakeButton , #flipButton {
+        transform: translateY(0px);
+        
+    }
+}

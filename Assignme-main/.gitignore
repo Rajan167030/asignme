@@ -1,0 +1,77 @@
+# AssignMe Project .gitignore
+
+# Dependencies
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+/dist
+/build
+/out
+
+# IDE and editor files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated fonts and images
+# Uncomment the following lines if you don't want to track generated fonts
+# canvaPage/fonts/generated_font.ttf
+# canvaPage/fonts/output_font.ttf
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+.temp/
+
+# Testing files
+coverage/
+.nyc_output/
+
+# API Keys and Secrets
+*.pem
+*.key
+*.cert
+
+# User specific data (if any)
+user-data/
