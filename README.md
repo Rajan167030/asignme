@@ -4,7 +4,11 @@ AssignMe is an open source web application that helps students complete their as
 
 
 
-![AssignMe Logo](image/logo.png)
+<img width="1923" height="897" alt="Screenshot 2025-08-31 232841" src="https://github.com/user-attachments/assets/14a7b827-ea74-4983-ac2d-7bbf28c5d5ad" />
+
+<img width="1923" height="875" alt="Screenshot 2025-08-31 232857" src="https://github.com/user-attachments/assets/8e6649c0-dec6-4df4-bd86-e721801dfa80" />
+
+
 
 ## 🛡️ Open Source
 
