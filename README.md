@@ -2,11 +2,12 @@
 
 AssignMe is an open source web application that helps students complete their assignments by converting digital text into customizable handwritten-style documents. The application provides two main features: generating handwritten-style documents from text and creating custom handwriting fonts from your own handwriting samples. You just need to upload your assignment question and wait for the magic.
 
-
+<img width="1080" height="1080" alt="WOCS-ProjectAdmin-badge" src="https://github.com/user-attachments/assets/ec08fd81-fe1c-48d6-858a-3c3372309a07" />
 
 <img width="1923" height="897" alt="Screenshot 2025-08-31 232841" src="https://github.com/user-attachments/assets/14a7b827-ea74-4983-ac2d-7bbf28c5d5ad" />
 
 <img width="1923" height="875" alt="Screenshot 2025-08-31 232857" src="https://github.com/user-attachments/assets/8e6649c0-dec6-4df4-bd86-e721801dfa80" />
+
 
 
 
