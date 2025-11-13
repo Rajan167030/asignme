@@ -1,5 +1,10 @@
 # AssignMe - Complete Your Assignments with Custom Handwriting
 
+[![GitHub stars](https://img.shields.io/github/stars/Rajan167030/asignme?style=social)](https://github.com/Rajan167030/asignme/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/Rajan167030/asignme?style=social)](https://github.com/Rajan167030/asignme/network/members)
+[![GitHub issues](https://img.shields.io/github/issues/Rajan167030/asignme)](https://github.com/Rajan167030/asignme/issues)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)# AssignMe - Complete Your Assignments with Custom Handwriting
+
 AssignMe is an open source web application that helps students complete their assignments by converting digital text into customizable handwritten-style documents. The application provides two main features: generating handwritten-style documents from text and creating custom handwriting fonts from your own handwriting samples. You just need to upload your assignment question and wait for the magic.
 
 <img width="1080" height="1080" alt="WOCS-ProjectAdmin-badge" src="https://github.com/user-attachments/assets/ec08fd81-fe1c-48d6-858a-3c3372309a07" />
