@@ -1,0 +1,14 @@
+# Files to exclude from Render deployment
+.git
+.gitignore
+.vscode
+.idea
+*.md
+LICENSE
+.DS_Store
+*.log
+*.tmp
+.env.example
+cypress.json
+tests/
+docs/

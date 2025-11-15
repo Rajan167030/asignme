@@ -1,0 +1,40 @@
+services:
+  # Main Web Service - Static Frontend
+  - type: web
+    name: assignme-web
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
+    
+  # FontForge Backend Service (Optional - uncomment to deploy)
+  # - type: web
+  #   name: assignme-fontforge
+  #   env: docker
+  #   region: oregon
+  #   plan: free
+  #   dockerfilePath: ./Assignme-main/fontforge_backend/Dockerfile
+  #   dockerContext: ./Assignme-main/fontforge_backend
+  #   envVars:
+  #     - key: PORT
+  #       value: 8000
+  #   healthCheckPath: /docs
+  
+  # Gemini Q&A Service (Optional - uncomment to deploy)
+  # - type: web
+  #   name: assignme-qa
+  #   env: python
+  #   region: oregon
+  #   plan: free
+  #   buildCommand: pip install -r requirements.txt
+  #   startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+  #   rootDir: ./Assignme-main/q&a gemini
+  #   envVars:
+  #     - key: GEMINI_API_KEY
+  #       sync: false # Set this in Render dashboard
+  #   healthCheckPath: /docs
