@@ -40,6 +40,66 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <style>
+  body.dark-mode {
+    background-color: #121212;
+    color: #ab9494;
+  }
+
+  .custom-font {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+
+.upload-btn {
+  font-family: 'Gloria Hallelujah', cursive !important;
+}
+
+
+  /* Dark mode me text white dikhe */
+  body.dark-mode label,
+  body.dark-mode p,
+  body.dark-mode h1,
+  body.dark-mode h2,
+  body.dark-mode h3,
+  body.dark-mode h4,
+  body.dark-mode h5,
+  body.dark-mode h6,
+  body.dark-mode small,
+  body.dark-mode .form-help,
+  body.dark-mode .section-description {
+    color: #255abd !important;
+  }
+
+  /* Dark mode me input, select field dark background */
+  body.dark-mode input,
+  body.dark-mode select,
+  body.dark-mode textarea {
+    background-color: #1e1e1e;
+    color: #ffffff6a;
+    border-color: #444;
+  }
+
+  /* Dark mode me buttons */
+  body.dark-mode .btn,
+  body.dark-mode .upload-btn,
+  body.dark-mode .imp-button,
+  body.dark-mode .delete-button {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Output placeholder icon white */
+  body.dark-mode .output-placeholder i {
+    color: #fff !important;
+  }
+
+  /* Paper content text white in dark mode */
+  body.dark-mode .paper-content {
+    color: #fff;
+  }
+</style>
+
+
   <!-- CSS -->
 
   <link rel="stylesheet" href="./canvaPage/css/index.css" />
@@ -93,14 +153,18 @@
 
     <div class="upload-section">
       <h2 style="font-size: 1.75rem;">📄 Upload Your Assignment</h2>
-      <p class="section-description">Upload your assignment questions as a PDF or image file, and we'll convert them into handwritten text automatically.</p>
+      <p class="section-description">
+                        <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.4rem;" for="page-effects">
+Upload your assignment questions as a PDF or image file, and we'll convert them into handwritten text automatically.</p>
 
       <div class="upload-form">
         <div class="form-group">
           <label for="fileInput" class="form-label">
-            <i class="fas fa-file-upload"></i> Choose File
+            <i class="fas fa-file-upload">
+             <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
+            </i> Choose File
           </label>
-          <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png">
+          <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" class="custom-font">
           <small class="form-help">Supported formats: PDF, JPG, PNG</small>
         </div>
 
@@ -108,12 +172,14 @@
           <label for="subjectInput" class="form-label">
             <i class="fas fa-book"></i> Subject Name
           </label>
-          <input type="text" id="subjectInput" placeholder="e.g., Mathematics, Physics, History">
+          <input type="text" id="subjectInput" placeholder="e.g., Mathematics, Physics, History" class="custom-font">
           <small class="form-help">Enter the subject to help process your assignment better</small>
         </div>
 
         <button onclick="uploadFile()" class="upload-btn">
-          <i class="fas fa-upload"></i> Upload & Process
+          <i class="fas fa-upload">
+             <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
+          </i> Upload & Process
         </button>
       </div>
 
@@ -160,7 +226,9 @@
             </div>
 
             <h3 style="font-size: 1.2rem;"><i class="fas fa-palette"></i> Handwriting Customization</h3>
-            <p class="section-description">Customize how your handwritten assignment will look</p>
+            <p class="section-description">
+                              <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive;  font-size: 1.2rem;" for="page-effects">
+Customize how your handwritten assignment will look</p>
 
             <div class="category-grid">
               <div class="form-group">
@@ -223,12 +291,14 @@
 
             <div class="category-grid">
               <div class="form-group">
-                <h2 style="font-size: 1.2rem;"><i class="fas fa-upload"></i> Upload Custom Font</h2>
-                <p class="section-description">Have your own handwriting font? Upload it here!</p>
-                <input type="file" id="fontInput" accept=".ttf, .otf, .woff, .woff2">
+                <h2 style="font-size: 1.2rem; font-family: 'Gloria Hallelujah', cursive;"><i class="fas fa-upload" ></i> Upload Custom Font</h2>
+                <p class="section-description">
+                                  <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
+Have your own handwriting font? Upload it here!</p>
+                <input type="file" id="fontInput" accept=".ttf, .otf, .woff, .woff2" class = "custom-font">
                 <small class="form-help">Supported formats: TTF, OTF, WOFF, WOFF2</small>
                 <button onclick="uploadFont()" class="upload-btn secondary">
-                  <i class="fas fa-font"></i> Upload Font
+                  <i class="fas fa-font"></i>Upload Font
                 </button>
                 <div id="fontResponse" class="response-message"></div>
               </div>
@@ -272,11 +342,13 @@
 
             <div style="display: flex; gap: 20px; justify-content: space-between; flex-wrap: wrap; margin-top: 20px;">
               <div class="option-card">
-                <label style="display: block; margin-bottom: 10px; font-size: 1.25rem;" for="page-effects">
-                  <i class="fas fa-magic"></i> <strong>Visual Effects</strong>
+                <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive;  font-size: 1.2rem;" for="page-effects">
+                  <i class="fas fa-arrows-alt-v"></i> <strong>Visual Effects</strong>
                 </label>
-                <p class="card-description">Add realistic effects to make your handwriting look more authentic</p>
-                <select id="page-effects" style="padding: 8px; font-size: 16px; width: 100%; font-family: Arial, sans-serif; border-radius: 5px;">
+                <p class="card-description">
+                                  <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive;  font-size: 1.2rem;" for="page-effects">
+Add realistic effects to make your handwriting look more authentic</p>
+                <select id="page-effects" style="padding: 8px; font-size: 16px; width: 100%; font-family: 'Gloria Hallelujah', cursive; border-radius: 5px;">
                   <option default value="shadows" style="padding: 5px;">✨ Shadows (Realistic)</option>
                   <option value="scanner" style="padding: 5px;">📄 Scanner Effect</option>
                   <option value="no-effect" style="padding: 5px;">📝 Clean (No Effect)</option>
@@ -284,11 +356,13 @@
               </div>
               
               <div class="option-card">
-                <label style="display: block; margin-bottom: 10px; font-size: 1.25rem;" for="paper-file">
+                <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.2rem;" for="paper-file">
                   <i class="fas fa-image"></i> <strong>Custom Paper Background</strong>
                 </label>
-                <p class="card-description">Upload your own paper texture for a personalized look</p>
-                <input type="file" id="paper-file" accept="image/jpeg,image/png,image/jpg" style="width: 100%; padding: 8px; border-radius: 5px;">
+                <p class="card-description">
+                                  <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.2rem;" for="page-effects">
+Upload your own paper texture for a personalized look</p>
+                <input type="file" id="paper-file" accept="image/jpeg,image/png,image/jpg" style="width: 100%; padding: 8px; border-radius: 5px;  font-family: 'Gloria Hallelujah', cursive;">
                 <small class="form-help">Optional: JPG, PNG formats supported</small>
               </div>
             </div>
@@ -299,6 +373,7 @@
                   <i class="fas fa-tint"></i> Pen Color
                 </label>
                 <select id="ink-color" style="font-size: 1.2rem;">
+                                  <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah', cursive; font-size: 1.2rem;" for="page-effects">
                   <option default value="#000f55">🔵 Blue</option>
                   <option value="black">⚫ Black</option>
                   <option value="#ba3807">🔴 Red</option>
@@ -313,8 +388,9 @@
             <!-- GENERATE IMAGE BUTTONS -->
             <hr style="border: 0.3px solid var(--elevation-background); width: 80%;" />
             <div style="text-align: center; padding: 30px 0px;">
-              <button type="submit" data-testid="generate-image-button" class="button generate-image-button" style="font-size: 1.7rem;">
-                <i class="fas fa-magic"></i> Generate Handwritten Sheet
+              <button type="submit" data-testid="generate-image-button" class="button generate-image-button" style="font-size: 1.7rem; margin-bottom: 5px; font-family: 'Gloria Hallelujah', cursive;">
+                <i class="fas fa-magic">
+                </i> Generate Handwritten Sheet
               </button>
               <p class="button-description">Click to create your customized handwritten assignment</p>
             </div>
@@ -328,9 +404,9 @@
       <h2 id="output-header"><i class="fas fa-images"></i> Generated Results</h2>
       <div id="output" class="output" style="text-align: center;">
         <div class="output-placeholder">
-          <i class="fas fa-file-image fa-3x" style="color: #ccc; margin-bottom: 20px;"></i>
-          <p>Your handwritten assignment will appear here</p>
-          <small>Click "Generate Handwritten Sheet" to get started</small>
+          <i class="fas fa-file-image fa-3x" style="color: #1a1818; margin-bottom: 45px;"></i>
+          <h2>Your handwritten assignment will appear here</h2>
+          <h2>Click "Generate Handwritten Sheet" to get started</h2>
         </div>
       </div>
       <div style="text-align: center; padding: 30px;">
@@ -409,12 +485,14 @@
     <div class="footer-container">
       <div class="footer-content">
         <div class="footer-section about">
-          <h3>About AssignMe</h3>
+        <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
+          <h2>About AssignMe</h2>
           <p>Convert your assignments to beautiful handwritten documents with customizable fonts and effects.</p>
           <p class="made-by">Made with ❤️ by <strong>Rajan</strong></p>
         </div>
 
         <div class="footer-section links">
+              <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
           <h3>Quick Links</h3>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -425,6 +503,7 @@
         </div>
 
         <div class="footer-section social">
+           <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
           <h3>Connect with Me</h3>
           <div class="social-links">
             <a href="https://github.com/yourusernameRajan167030" target="_blank" class="social-link github">
@@ -439,6 +518,7 @@
         </div>
 
         <div class="footer-section references">
+           <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
           <h3>References</h3>
           <p>Github, Node community, GenAI, Open-source</p>
         </div>
@@ -446,8 +526,10 @@
 
       <div class="footer-bottom">
         <div class="footer-bottom-content">
+           <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.6rem;" for="page-effects">
           <p>&copy; 2025 AssignMe. All rights reserved. | Made by Rajan</p>
           <div class="footer-tech">
+             <label style="display: block; margin-bottom: 10px; font-family: 'Gloria Hallelujah';  font-size: 1.2rem;" for="page-effects">
             <span>Built with HTML, CSS & JavaScript</span>
           </div>
         </div>
