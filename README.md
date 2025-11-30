@@ -89,7 +89,7 @@ This project is open source and released under the [MIT License](./LICENSE). You
 
 ## 🖼️ System Architecture
 
-![System Architecture](image/Systemdesign.jpeg)
+![System Architecture](/Assignme-main/image/Systemdesign.jpeg)
 
 This was early prototype system architecture that laid the solid foundation for the platform. Load balancing and bottleneck handling architecture designs are not included in this diagram, as they were implemented during the hosting phase.
 
