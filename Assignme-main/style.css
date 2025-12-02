@@ -99,14 +99,18 @@ section{
     margin-top: 1rem;
     border-radius: 5rem;
     background-color: var(--light-black);
+    color: var(--white);
     cursor: pointer;
     font-size: 1.8rem;
     padding: 1rem 3rem;
+    transition: all 0.3s ease;   /* smooth animation */
 }
 
 .btn:hover{
     background-color: var(--white);
     color: var(--black);
+    transform: scale(1.05);      /* slight zoom */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* lift effect */
 }
 
 .heading{
