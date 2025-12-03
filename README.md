@@ -202,62 +202,111 @@ For AI-powered question processing:
 
 ## 📂 Project Structure
 
+
 ```
+
 assignme/
 │
-├── index.html            # Main application page
-├── docs.html             # Documentation and guide
-├── contactus.html        # Feedback form
-├── style.css             # Main stylesheet
-├── .gitignore            # Git ignore configuration
-├── .env                  # Environment variables (not tracked in git)
-├── .env.example          # Example environment variables template
+├── .gitignore
+├── .renderignore
+├── CODE_OF_CONDUCT.md
+├── DEPLOYMENT_CHECKLIST.md
+├── LICENSE
+├── package.json
+├── README.md
+├── render.yaml
+├── RENDER_DEPLOY.md
+├── server.js
+├── SETUP_COMPLETE.md
 │
-├── js/                   # JavaScript files
-│   ├── script.js         # Main script file
-│   └── config.js         # Configuration and environment variables loader
+├── .github
+│   ├── pull_request_template.md
+│   └── ISSUE_TEMPLATE
+│       ├── Bug report.md
+│       ├── documentation.md
+│       ├── feature request.md
+│       ├── other_issue.md
+│       ├── performance_issue.md
+│       └── refactor_request.md
 │
-├── canvaPage/            # Canvas drawing functionality
-│   ├── css/              # Canvas page stylesheets
-│   │   ├── features.css  # Feature-specific styles
-│   │   └── index.css     # Canvas page main styles
-│   │
-│   ├── js/               # Canvas page scripts
-│   │   ├── app.mjs       # Main application script
-│   │   ├── generate-images.mjs  # Image generation functionality
-│   │   └── utils/        # Utility functions
-│   │       ├── draw.mjs  # Drawing functions
-│   │       ├── generate-utils.mjs  # Generation utilities
-│   │       └── helpers.mjs  # Helper functions
-│   │
-│   ├── fonts/            # Custom and generated fonts
-│   └── cypress.json      # Cypress testing configuration
+├── Assignme-main
+│   ├── backend
+│   │   └── fontforge
+│   │       ├── app.py
+│   │       └── Dockerfile
+│   ├── canvapage
+│   │   ├── cypress.json
+│   │   ├── images
+│   │   │   └── dropdown.svg
+│   │   └── js
+│   │       ├── app.mjs
+│   │       ├── generate-images.mjs
+│   │       └── vendors
+│   │           └── html2canvas.min.js
+│   ├── capture-image
+│   │   ├── index.html
+│   │   ├── scripts.js
+│   │   └── style.css
+│   ├── public
+│   │   ├── css
+│   │   │   ├── features.css
+│   │   │   └── index.css
+│   │   ├── fonts
+│   │   │   ├── generated_font.ttf
+│   │   │   ├── hindi_type.ttf
+│   │   │   └── ... (all other TTF files)
+│   │   └── images
+│   │       ├── aboutus.jpg
+│   │       ├── contact-us.png
+│   │       ├── do.jpeg
+│   │       ├── dont.jpeg
+│   │       ├── front.jpg
+│   │       ├── icon.png
+│   │       ├── logo.png
+│   │       ├── ownfont.png
+│   │       ├── Systemdesign.jpeg
+│   │       ├── takeimg.jpeg
+│   │       └── docs
+│   │           ├── custom-font-use.jpg
+│   │           ├── customization.jpg
+│   │           ├── docs.jpg
+│   │           ├── download.jpg
+│   │           ├── file-upload.jpg
+│   │           ├── font-capture.jpg
+│   │           └── generate.jpg
+│   ├── q&a gemini
+│   │   ├── main.py
+│   │   └── requirements.txt
+│   ├── script
+│   │   ├── package.json
+│   │   ├── test.js
+│   │   └── images
+│   │       ├── 1.png
+│   │       ├── 2.png
+│   │       └── ... (all other numbered PNGs)
+│   └── src
+│       ├── js
+│       │   ├── config.js
+│       │   └── script.js
+│       ├── tests
+│       │   └── generateimage.spec.js
+│       └── utils
+│           ├── draw.mjs
+│           ├── generate-utils.mjs
+│           └── helpers.mjs
 │
-├── captureimg/           # Custom handwriting capture functionality
-│   ├── index.html        # Handwriting capture page
-│   ├── scripts.js        # Capture functionality
-│   └── style.css         # Capture page styles
-│
-├── fontforge_backend/    # FontForge backend service
-│   ├── app.py            # Flask application for font processing
-│   ├── Dockerfile        # Docker configuration for containerization
-│   └── requirements.txt  # Python dependencies (inferred)
-│
-├── q&a gemini/           # AI-powered Q&A service
-│   ├── main.py           # Main application script for Gemini integration
-│   ├── requirements.txt  # Python dependencies for AI service
-│   └── config/           # Configuration files (inferred)
-│
-├── image/                # Website images
-│   ├── logo.png          # Site logo
-│   ├── icon.png          # Favicon
-│   ├── docs/             # Documentation images
-│   └── ...               # Other site images
-│
-└── script/               # Additional scripts and resources
-    ├── package.json      # Package configuration (not for main app)
-    ├── test.js           # Testing script
-    └── images/           # Sample images for font generation
+├── backend
+│   └── fontforge
+├── capture-image
+├── public
+│   ├── css
+│   ├── fonts
+│   └── images
+└── src
+├── js
+├── tests
+└── utils
+
 ```
 
 ## 🏗️ Architecture Overview
